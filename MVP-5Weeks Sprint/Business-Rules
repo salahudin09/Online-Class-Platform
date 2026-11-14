@@ -29,6 +29,9 @@
 | **BR-CP08** | Video content must be delivered exclusively through the approved encrypted DRM mechanism; direct MP4 URLs are strictly prohibited. |
 | **BR-CP09** | Video playback must include a dynamic watermark displaying the student's masked phone number (e.g., 010****1234) to protect privacy while deterring piracy. |
 | **BR-CP10** | Attached PDFs and homework links must enforce their own entitlement checks independently from the video player. |
+| **BR-CP11** | A published class with a price equal to 0 EGP is classified as a Free Class and must display an "Enroll for Free" action instead of "Purchase". |
+| **BR-CP12** | Enrolling in a Free Class (price = 0) must create an ACTIVE enrollment record directly (price_paid_piastres = 0) without requiring a minimum wallet balance, deducting funds, or generating a record in wallet_transactions. |
+| **BR-CP13** | Free Class enrollments are subject to the exact same duplicate-prevention rules (BR-CP02: one active enrollment per student per class) and content protection mechanisms (BR-CP06 to BR-CP10: DRM playback, dynamic watermarking, and independent material entitlement checks) as paid classes. |
 
 ---
 

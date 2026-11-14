@@ -31,6 +31,7 @@
 | **BR-CP11** | A published class with a price equal to 0 EGP is classified as a Free Class and must display an "Enroll for Free" action instead of "Purchase". |
 | **BR-CP12** | Enrolling in a Free Class (price = 0) must create an ACTIVE enrollment record directly (price_paid_piastres = 0) without requiring a minimum wallet balance, deducting funds, or generating a record in wallet_transactions. |
 | **BR-CP13** | Free Class enrollments are subject to the exact same duplicate-prevention rules (BR-CP02: one active enrollment per student per class) and content protection mechanisms (BR-CP06 to BR-CP10: DRM playback, dynamic watermarking, and independent material entitlement checks) as paid classes. |
+| **BR-CP14** | Subscription refunds are not processed automatically; they must be executed manually by a user with 'Super Admin' privileges. Each refund requires a corresponding reversing financial entry in the ledger, and the enrollment status must be updated to 'REFUNDED' to immediately revoke access to the content. |
 
 ---
 

@@ -268,6 +268,9 @@ flowchart TD
 |   Password *                                                      |
 |   [ ****************                                          ]   |
 |                                                                   |
+|   [x] I confirm parental/guardian consent to register and         |
+|       process student data under the Privacy Policy (PDPL).       |
+|                                                                   |
 |   [                      Create Account                       ]   |
 |                                                                   |
 |   ⚠️ Validation Messages:                                         |

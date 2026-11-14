@@ -55,7 +55,6 @@
 * Generate bulk batches of randomized 14-digit numeric Scratch Codes, assigned either to specific monetary wallet values or direct lecture unlocks  
 * Export generated code batches as print-ready PDF/CSV manifests for physical cutting and cash distribution at offline educational center  
 * Perform single-code status lookups (Code Inquiry) to verify if a specific code is Active, Redeemed (displaying the redeeming student's ID and timestamp), or Deactivated to resolve student support tickets  
-* Deactivate specific unredeemed code ranges (e.g., unsold or lost physical cards returned from the center)  
 * External Payment Handling (Online Students): Verify out-of-system digital transfers (e.g., Vodafone Cash receipts sent via external channels like WhatsApp), and fulfill the transaction by either performing a direct manual top-up to the student's wallet from the dashboard, or generating and sending a single-use Scratch Code to the student
 
 ***Strict Access Restrictions (Security & Anti-Fraud Constraints):***

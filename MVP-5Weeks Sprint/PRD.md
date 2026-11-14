@@ -27,6 +27,7 @@ Mahm0udNasr-TL |
 2. Success Metrics
 1- A 100% match between issued top-up codes and cash collected (zero discrepancies), demonstrating the elimination of manipulation by assistants
 2- A 0% rate of illegal downloads or video leaks, demonstrating the effectiveness of the DRM system
+3- 1- **Batch Cash Reconciliation:** 100% reconciliation between redeemed scratch codes per batch and physical cash settled by assistants via manual batch settlement logs (`batch_settlements`), eliminating unrecorded cash discrepancies.
 3. Guardrail/Do not disturb metrics (These metrics shouldn’t be negatively affected)
 1- False Positive Account Locks: The rate of legitimate student accounts automatically locked due to the 2-device limit security rule must remain below 5%
 
@@ -171,3 +172,5 @@ To maintain a lean scope and ensure a fast time-to-market (5 weeks), the followi
 - **Vodafone Cash Daily/Monthly Limits:** Since the teacher's assistant will receive money manually via Vodafone Cash, we are dependent on the telecom's wallet limits. If the transaction volume exceeds the limit, cash flow will be temporarily blocked. (Mitigation: Using multiple merchant numbers)
 **5. Internal Dependencies (Tech, Design, Other Teams)
 - Operations & Training:** The Tech team must thoroughly train the Center Assistants (Admins) on how to securely generate, export, and distribute the Scratch Codes without duplicating them or sending the wrong codes to students
+**6. Legal & Regulatory Compliance (Egypt PDPL 151/2020):**
+- Since the platform serves minor students (ages 16–18), Egyptian Personal Data Protection Law (Law No. 151/2020) requires verifiable parental consent. Legal counsel review is mandatory prior to production launch, and the system must record `consent_version` and `consent_at` timestamps upon registration.

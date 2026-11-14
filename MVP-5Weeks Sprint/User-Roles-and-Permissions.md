@@ -58,6 +58,7 @@
 * Export generated code batches as print-ready PDF/CSV manifests for physical cutting and cash distribution at offline educational center  
 * Perform single-code status lookups (Code Inquiry) to verify if a specific code is Active, Redeemed (displaying the redeeming student's ID and timestamp), or Deactivated to resolve student support tickets  
 * External Payment Handling (Online Students): Verify out-of-system digital transfers (e.g., Vodafone Cash receipts sent via external channels like WhatsApp), and fulfill the transaction by either performing a direct manual top-up to the student's wallet from the dashboard, or generating and sending a single-use Scratch Code to the student
+* External Payment Handling (Online Students):** Verify out-of-system digital transfers (e.g., Vodafone Cash receipts sent via WhatsApp) and execute a direct manual wallet top-up subject to a configurable daily limit enforced by the backend and logged separately for audit reconciliation.
 
 ***Strict Access Restrictions (Security & Anti-Fraud Constraints):***
 
@@ -74,11 +75,13 @@
 ***Inherited Operational Authority:***
 
 * Possesses full read/write/delete (Full CRUD) privileges across all Assistant operational modules (Content, Assessments, Student Profiles, and Scratch Code Management), including permanent Hard-Delete capabilities
+* Possesses full operational privileges across all Assistant modules, including permanent Hard-Delete capabilities strictly restricted to records with zero associated financial transactions or ledger history.
 
 ***Financial Dashboard & Revenue Reconciliation:***
 
 * Access real-time financial analytics displaying gross revenue, total redeemed scratch code value, active student wallet balances, and course-by-course sales performance  
 * View batch reconciliation reports comparing Total Generated/Printed Codes against Total Redeemed Codes per batch to audit physical cash collection from Assistants at the center
+* Record and audit batch cash settlements (`batch_settlements`) comparing total redeemed scratch codes against physical cash handed over by Assistants, alongside a dedicated report for Assistant manual top-ups.
 
 ***Security & Anti-Fraud Audit Log (Immutable Read-Only):***
 

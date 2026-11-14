@@ -179,6 +179,32 @@ flowchart TD
 ```
 
 ---
+### **Free Class Enrollment Flow**
+```mermaid
+flowchart TD
+    Start([Student selects a Free Class]) --> CheckAvail{"Is Class Available & Published?"}
+    CheckAvail -- No --> UnavailableErr[/"Show Error: Class currently unavailable"/]
+
+    %% Check if already enrolled
+    CheckAvail -- Yes --> CheckEnroll{"Has Active Enrollment?"}
+    CheckEnroll -- Yes --> GrantAccess["Grant Class Page Access"]
+
+    %% Free Enrollment Path (Price == 0)
+    CheckEnroll -- No --> CheckPrice{"Is Class Price == 0 EGP?"}
+    CheckPrice -- No --> PaidFlow(["Redirect to Paid Purchase Flow"])
+
+    CheckPrice -- Yes --> ClickEnroll[/"Student clicks 'Enroll for Free'"/]
+    ClickEnroll --> EnrollTx["Start Atomic DB Transaction"]
+    
+    EnrollTx --> CreateEnroll["Create Enrollment Record (status='ACTIVE', source='FREE', price_paid=0)"]
+    CreateEnroll --> SkipWallet["Bypass Wallet Deduction & Ledger Entry (No Financial Tx)"]
+    SkipWallet --> CommitTx["Commit DB Transaction"]
+    
+    CommitTx --> LogEvent["Log Event: free_class_enrolled (user_id, class_id)"]
+    LogEvent --> GrantAccess
+    GrantAccess --> EndFlow([Student Accesses DRM Video & Materials])
+```
+---
 
 ### **Admin & Assistant Operations Flow (RBAC & Audit-Ready)**
 

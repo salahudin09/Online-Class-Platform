@@ -47,5 +47,5 @@
 | **BR-AD06** | A class cannot be published; it must remain in a "Processing" or "Ready/Draft" state until the DRM provider successfully completes video encryption. |
 | **BR-AD07** | Student information displayed in the support dashboard must be masked (e.g., partial phone numbers/codes) according to the operator's permission level (Principle of Least Privilege). |
 | **BR-AD08** | Resetting a student's devices must explicitly revoke all active authentication sessions (Log out from all devices) in addition to clearing the allowed devices array. |
-| **BR-AD09** | Changing a student's primary phone number requires strict identity verification (e.g., OTP sent to the parent) and must invalidate existing sessions to prevent account hijacking. |
+| **BR-AD09** | Changing a student's primary phone number requires strict identity verification (e.g., Manual parent verification call) and must invalidate existing sessions to prevent account hijacking and recording the reason in the Audit log. |
 | **BR-AD10** | Every sensitive administrative action (generating codes, publishing classes, resetting devices, changing numbers) must be permanently recorded in an append-only Audit Log containing the Operator ID and timestamp. |

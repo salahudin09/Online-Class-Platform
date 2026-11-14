@@ -89,7 +89,7 @@
 * Create, edit, suspend, or permanently revoke Assistant accounts  
 * Configure granular permission toggles per Assistant (e.g., restricting a specific Assistant to *Academic Q\&A & Exam Grading* while revoking *Scratch Code Generation* privileges)
 
-***White-Label & Tenant Configuration:***
+***White-Label & Configuration:***
 
 * Manage global platform branding variables via the Admin Settings UI: upload primary/secondary logos, configure theme color palettes (Primary, Secondary, Accent hex codes), update landing page hero assets, and set official support/social media links (WhatsApp, Telegram, Facebook, YouTube)  
 * Configure global DRM and security parameters (e.g., adjusting the global maximum device limit per student, customizing dynamic watermark opacity/speed, and toggling maintenance mode)

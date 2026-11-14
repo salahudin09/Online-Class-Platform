@@ -151,7 +151,7 @@ As a** enrolled student
 | `user_registered` | Student successfully creates an account. | `user_id`, `grade_level` | To measure daily sign-up volume. |
 | `wallet_topped_up` | Student successfully redeems a scratch code. | `user_id`, `amount_added` | To track daily cash flow and code usage. |
 | `invalid_code_attempt` | Student enters a wrong or used code. | `user_id`, `error_type` | To detect potential fraud or guessing attempts. |
-| `class_purchased` | Student buys a class package. | `user_id`, `class_name`, `price` | To identify the best-selling lessons. |
+| `class_purchased` | Student buys a class or a chapter. | `user_id`, `class_name`, `price` | To identify the best-selling lessons. |
 | `video_started` | Student clicks play on the DRM video. | `user_id`, `video_id` | To track actual engagement with content. |
 1. **Out of scope:**
 To maintain a lean scope and ensure a fast time-to-market (5 weeks), the following features are explicitly excluded from this phase and deferred to Phase 2:

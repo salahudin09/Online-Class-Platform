@@ -26,7 +26,7 @@
 ***Financials:***  
  **Wallet Top-up & Payments:** Charging the personal wallet or unlocking courses is done exclusively via two methods:
 
-1. **Offline Cash Top-up:** Redeeming a pre-generated 11-digit Scratch Code purchased physically from the center.  
+1. **Offline Cash Top-up:** Redeeming a pre-generated 14-digit Scratch Code purchased physically from the center.  
 2. **Manual Admin Top-up:** Executed directly by the Assistant from the dashboard after verifying an external out-of-system transfer (e.g., manual Vodafone Cash transfer via WhatsApp) for online-only students.
 
 # 

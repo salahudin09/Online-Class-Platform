@@ -52,7 +52,7 @@
 ***Financials:***  
  Scratch Code Operations (Offline Center Distribution):
 
-* Generate bulk batches of randomized 11-digit alphanumeric Scratch Codes (excluding ambiguous characters 0, O, 1, I), assigned either to specific monetary wallet values or direct lecture unlocks  
+* Generate bulk batches of randomized 14-digit numeric Scratch Codes, assigned either to specific monetary wallet values or direct lecture unlocks  
 * Export generated code batches as print-ready PDF/CSV manifests for physical cutting and cash distribution at offline educational center  
 * Perform single-code status lookups (Code Inquiry) to verify if a specific code is Active, Redeemed (displaying the redeeming student's ID and timestamp), or Deactivated to resolve student support tickets  
 * Deactivate specific unredeemed code ranges (e.g., unsold or lost physical cards returned from the center)  

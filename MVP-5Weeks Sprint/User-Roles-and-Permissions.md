@@ -22,6 +22,7 @@
 * Wallet(Balance, bills, subscriptions)  
 * Enrolled courses and lessons  
 * scheduled homework and exams
+* Student can access attached class materials and submit homework via external links (e.g., Google Forms) provided on the class page for the MVP
 
 ***Financials:***  
  **Wallet Top-up & Payments:** Charging the personal wallet is done exclusively via two methods:
@@ -40,7 +41,8 @@
 * Assistant structure educational courses Monthly bundles,chapters, and individual lectures  
 * Assistant uploads DRM-protected VOD lessons, attach supplementary PDF lecture notes  
 * Assistant configures lesson-specific consumption rules (maximum view count per student, watch-time expiration quota)  
-* Build and manage assessment modules (Homework & Prerequisite MCQ Exams) with automated grading logic and minimum passing score thresholds required to unlock subsequent lectures
+* Build and manage assessment modules (Homework & Prerequisite MCQ Exams) at external google form and minimum passing score thresholds required to unlock subsequent lectures
+* Assistant attaches external homework links or PDF assessments for lessons in the MVP
 
 ***Student Lifecycle & Technical support:***
 

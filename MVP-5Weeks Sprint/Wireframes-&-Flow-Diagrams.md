@@ -232,8 +232,8 @@ flowchart TD
     DRMProcess --> CheckStatus{"Is DRM Processing Successful?"}
     CheckStatus -- No --> SetFail["Set Class Status = Failed"]
     CheckStatus -- Yes --> SetReady["Set Class Status = Ready"]
-    SetReady --> CheckPub{"Has Publish Permission?"}
-    CheckPub -- No --> KeepReady["Save as Draft / Await Admin Approval"]
+    SetReady --> CheckPub{"Has Explicit Publish Permission (class.publish)?"}
+    CheckPub -- No --> KeepReady["Save as Draft / Await Super Admin Approval"]
     CheckPub -- Yes --> Publish["Publish Class"]
     Publish --> Audit2["Log Audit: class_published (Operator ID)"]
 
@@ -246,15 +246,15 @@ flowchart TD
     SupportAction -- "Reset Devices" --> CheckPerm3{"Has Reset Permission?"}
     CheckPerm3 -- No --> Deny3[/"Show Error: Unauthorized"/]
     CheckPerm3 -- Yes --> Revoke["Revoke DB Devices & Terminate Active Sessions"]
-    Revoke --> Audit3["Log Audit: devices_reset (Operator ID, Student ID)"]
+    Revoke --> Audit3["Log Audit: devices_reset (Operator ID, Student ID)[cite: 4]"]
 
     %% Change Phone
-    SupportAction -- "Change Phone" --> VerifyID{"Is Parent Identity Verified? (OTP/Manual)"}
+    SupportAction -- "Change Phone" --> VerifyID{"Is Parent Identity Verified Manually?"}
     VerifyID -- No --> Deny4[/"Show Error: Verification Failed"/]
     VerifyID -- Yes --> CheckNewPhone{"Is New Phone Available in DB?"}
     CheckNewPhone -- No --> ErrPhone[/"Show Error: Phone Already Exists"/]
     CheckNewPhone -- Yes --> UpdatePhone["Update Primary Phone & Terminate Sessions"]
-    UpdatePhone --> Audit4["Log Audit: phone_changed (Operator ID, Old/New Phone)"]
+    UpdatePhone --> Audit4["Log Audit: phone_changed (Operator ID, Old/New Phone)[cite: 4]"]
 ```
 
 ---

@@ -7,9 +7,8 @@
 | **BR-W03** | A recharge code can be redeemed only once. |
 | **BR-W04** | Each successful redemption credits the corresponding code value to the student's wallet. |
 | **BR-W05** | Five consecutive failed redemption attempts trigger a 15-minute top-up lock. |
-| **BR-W06** | Failed attempts include nonexistent, already-used, expired, or otherwise invalid codes. |
+| **BR-W06** | Failed attempts include nonexistent, already-used, or otherwise invalid codes. |
 | **BR-W07** | Successful redemption resets the failed-attempt counter to zero. |
-| **BR-W08** | A locked user cannot redeem codes until the 15-minute lock expires (expiration automatically resets the counter). |
 | **BR-W09** | A successful redemption must update the code status, wallet balance, and transaction record consistently within a single atomic transaction. |
 | **BR-W10** | The system must prevent simultaneous redemption of the same code using database row locks or conditional updates (Concurrency Control). |
 
@@ -27,7 +26,7 @@
 | **BR-CP06** | Only students with an "Active" enrollment status can access protected class content (suspended or refunded enrollments are blocked). |
 | **BR-CP07** | Video playback requires a short-lived playback authorization token from the DRM provider for every session. |
 | **BR-CP08** | Video content must be delivered exclusively through the approved encrypted DRM mechanism; direct MP4 URLs are strictly prohibited. |
-| **BR-CP09** | Video playback must include a dynamic watermark displaying the student's masked phone number (e.g., 010****1234) to protect privacy while deterring piracy. |
+| **BR-CP09** | Video playback must include a dynamic watermark displaying the student's ID &masked phone number (e.g.,Student ID - 010****1234) to protect privacy while deterring piracy. |
 | **BR-CP10** | Attached PDFs and homework links must enforce their own entitlement checks independently from the video player. |
 | **BR-CP11** | A published class with a price equal to 0 EGP is classified as a Free Class and must display an "Enroll for Free" action instead of "Purchase". |
 | **BR-CP12** | Enrolling in a Free Class (price = 0) must create an ACTIVE enrollment record directly (price_paid_piastres = 0) without requiring a minimum wallet balance, deducting funds, or generating a record in wallet_transactions. |

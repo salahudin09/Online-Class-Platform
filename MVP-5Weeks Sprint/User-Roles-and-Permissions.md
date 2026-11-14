@@ -46,7 +46,7 @@
 
 * Query student profiles using Student ID, registered phone number, or Parent's phone number  
 * Student Tagging & Filtering(Manage student categorization tags (Enrollment Type: Center vs. Online-Only, Governorate, Academic Grade, and Gender))  
-* Execute account recovery actions: trigger password resets and clear registered browser/device fingerprints (Reset Device Limit) when a student's account is auto-locked for exceeding the 2-device maximum  
+* Execute account recovery actions: trigger password resets and clear registered browser/device fingerprints (Reset Device Limit) when a student's account is auto-locked for exceeding the active devices limit 2-devices & one active(online) session
 * View individual student logs (exam scores, video completion status) to handle parent inquiries, and respond to academic Q\&A comments under VODs
 
 ***Financials:***  

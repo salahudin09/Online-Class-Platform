@@ -4,33 +4,20 @@
 
 ```mermaid
 flowchart TD
-    %% Start state using oval
     Start([Student opens Registration Page]) --> InputForm
-    
-    %% Input state using parallelogram 
-    InputForm[/Student enters Name, Phones, Grade, Password/] --> ValidateFormat{Are all inputs valid?}
-    
-    %% Validation 1: Format & Empty fields
-    ValidateFormat -- No --> FormatErr[/Show Error: Missing or invalid format/]
+    InputForm[/Student enters Name, Phones, Grade, Password & Parent Consent/] --> ValidateFormat{Are all inputs & consent valid?}
+    ValidateFormat -- No --> FormatErr[/Show Error: Missing fields or parental consent required/]
     FormatErr --> InputForm
-    
-    %% Validation 2: Logical check
     ValidateFormat -- Yes --> CheckMatch{Student Phone == Parent Phone?}
     CheckMatch -- Yes --> MatchErr[/Show Error: Phones must differ/]
     MatchErr --> InputForm
-    
-    %% Validation 3: Database check
     CheckMatch -- No --> CheckDB{Does Student Phone exist in DB?}
     CheckDB -- Yes --> ExistErr[/Show Error: Phone already registered/]
     ExistErr --> InputForm
-    
-    %% Backend Processes using rectangles
-    CheckDB -- No --> CreateAcc[Create Student Account in DB]
+    CheckDB -- No --> CreateAcc[Create Student Account & Save consent_version + consent_at]
     CreateAcc --> InitWallet[Initialize Wallet Balance = 0 EGP]
     InitWallet --> InitSession[Create Authenticated Session]
     InitSession --> RegDevice[Register current Device ID as Device #1]
-    
-    %% End state using oval
     RegDevice --> Redirect([Redirect to Student Dashboard])
 ```
 

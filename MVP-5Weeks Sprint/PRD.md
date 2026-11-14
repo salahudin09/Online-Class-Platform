@@ -143,7 +143,7 @@ As a** enrolled student
 
 **Edge Case 3: Phone Number Change:
 - Scenario:** A student loses their SIM card and gets a new phone number. Since their phone number is their primary identifier (User Story 1.1), they cannot access their wallet or purchased classes
-- **System Behavior / Mitigation:** Students cannot change their phone number autonomously to prevent selling accounts. They must contact support. The Admin can manually update the phone number in the database after verifying the student's identity (e.g., via the parent's phone number)
+- **System Behavior / Mitigation:** Students cannot change their phone number autonomously to prevent selling accounts. They must contact support. The Admin can manually update the phone number in the database after verifying the student's identity (e.g., via the parent's Manual phone call)
 6. **Event tracking sheet:**
 
 | **Event Name** | **Trigger (When it happens)** | **Properties/Data Passed** | **Why are we tracking this?** |
